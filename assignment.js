@@ -61,12 +61,13 @@ function budgetCalculator(watch, phone, laptop) {
 
 function hotelCost(days) {
     var totalCost = 0;
-
+    var warning;
     // check if days is greater 10 or not 
     if (days <= 10) {
         if (days < 0) {
             // show error if days is negative
-            console.log('number can not be zero or negative');
+            warning = 'number can not be zero or negative';
+            return warning;
         } else {
             // calculate total days and total cost for number of days
             var first10day = days;
@@ -79,7 +80,8 @@ function hotelCost(days) {
 
         if (days < 0) {
             // show error if days is negative
-            console.log('number can not be zero ');
+            warning = 'number can not be zero or negative';
+            return warning;
         } else {
             // calculate total days and total cost for number of days
             var second10day = (days - 10);
@@ -93,7 +95,8 @@ function hotelCost(days) {
     } else {
         if (days < 0) {
             // show error if days is negative
-            console.log('number can not be zero ');
+            warning = 'number can not be zero or negative';
+            return warning;
         } else {
             // calculate total days and total cost for number of days
             second10day = 10;
@@ -107,4 +110,31 @@ function hotelCost(days) {
             return totalCost;
         }
     }
+}
+
+/*
+    find big word length from an array 
+    with megaFriend() function
+*/
+
+var longWord = 0;
+
+var friends = ["alina", "angelina", "melane", "jacson"];
+// empty arr
+var arr = [];
+
+function megaFriend(array) {
+    //  check for empty array 
+    if (array == "") {
+        console.log("Array can not be empty");
+    } else {
+        for (i = 0; i < array.length; i++) {
+            // compare length between array length and longword
+            if (array[i].length > longWord) {
+                // assign lenght to longword
+                longWord = array[i].length;
+            }
+        }
+    }
+    return longWord;
 }
