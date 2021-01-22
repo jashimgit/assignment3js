@@ -120,13 +120,12 @@ function hotelCost(days) {
 var longWord = 0;
 
 var friends = ["alina", "angelina", "melane", "jacson"];
-// empty arr
-var arr = [];
 
 function megaFriend(array) {
     //  check for empty array 
     if (array == "") {
-        console.log("Array can not be empty");
+        var warning = "Array can not be empty";
+        return warning;
     } else {
         for (i = 0; i < array.length; i++) {
             // compare length between array length and longword
