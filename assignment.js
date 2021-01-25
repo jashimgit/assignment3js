@@ -123,11 +123,14 @@ function hotelCost(days) {
     with megaFriend() function
 */
 
-var longWord = 0;
+ 
 
 var friends = ["alina", "angelina", "melane", "jacson"];
 
 function megaFriend(array) {
+
+    let longWord = "";
+
     //  check for empty array 
     if (array == "") {
         var warning = "Array can not be empty";
@@ -135,9 +138,9 @@ function megaFriend(array) {
     } else {
         for (i = 0; i < array.length; i++) {
             // compare length between array length and longword
-            if (array[i].length > longWord) {
+            if (array[i].length > longWord.length) {
                 // assign lenght to longword
-                longWord = array[i].length;
+                longWord = array[i];
             }
         }
     }
