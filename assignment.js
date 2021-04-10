@@ -140,9 +140,12 @@ function megaFriend(array) {
             // compare length between array length and longword
             if (array[i].length > longWord.length) {
                 // assign lenght to longword
-                longWord = array[i];
+                longWord = array[i].length;
             }
         }
     }
-    return longWord;
+    // return longWord;
+    console.log(longWord); // test in console 
 }
+
+megaFriend(friends)
